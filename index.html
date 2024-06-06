@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module Global Var</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1 id="page-title" class="dosis-500">
+        Global vars in modules are project-wide global
+      </h1>
+      <article>
+        <div class="explanations dosis-300">
+          <p>
+            Exploring the persistency of variables that are defined in a module,
+            outside of any of its functions. When the module is imported, the
+            variable is initialised and then keeps that value, until the module is
+            eventually re-imported. This means that the module keeps the information
+            stored in the variable even if the variable is not exported. - And this
+            is basically what ChatGPT said.
+          </p>
+          <p>
+            What I can tell from this example, though, is that the a variable that is
+            global to a module is actually global to the whole project! It's not that
+            "the module holds the value of the variable for me, until the next
+            import"; it's rather that the value is global, hence survives imports of
+            functions from the module and function (imported from the module) calls.
+          </p>
+        </div>
+        <p class="dosis-500">
+          --> open the console to follow along with code execution...
+        </p>
+      </article>
+    </main>
+    <script src="./script.js" type="module"></script>
+    <script src="./script2.js" type="module"></script>
+  </body>
+</html>
