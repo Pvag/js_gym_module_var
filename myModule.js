@@ -1,4 +1,4 @@
-let magicNumber = 0
+let magicNumber = 0 // module-scoped variable (represents module state)
 
 export default function doSomething() {
   console.log("I am doing something, meanwhile...")
@@ -6,7 +6,7 @@ export default function doSomething() {
 
 export function setMagicNumber(n) {
   magicNumber = n
-  console.log(`I have just set the magic number to ${magicNumber}.`)
+  console.log(`I have just set the magic number to ${n}.`)
 }
 
 export function printMagicNumber() {
